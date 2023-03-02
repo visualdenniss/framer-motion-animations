@@ -17,6 +17,11 @@ const Nav = () => {
                             Basic
                         </li>
                     </Link>
+                    <Link className='nav-link' to='/usescrollbasic'>
+                        <li >
+                            UseScrollBasic
+                        </li>
+                    </Link>
                     <Link className='nav-link' to='/variants'>
                         <li>
                             Variants

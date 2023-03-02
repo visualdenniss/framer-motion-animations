@@ -1,20 +1,15 @@
 import React from 'react'
 import './Basic.css'
 import { motion } from "framer-motion";
+import { basic, basicKeyFrames, basicGestures, basicDrag } from '../animations';
 
 const Basic = () => {
     return (
         <main className='basic'>
-            <motion.div
-                className="basic-container"
-                initial={{ scale: 0 }}
-                animate={{ rotate: 180, scale: 1 }}
-                transition={{
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 20
-                }}
-            />
+            <motion.div {...basic} className="basic-container"/>
+            <motion.div {...basicKeyFrames} className="basic-container"/>
+            <motion.div {...basicGestures} className="basic-container"/>
+            <motion.div drag {...basicDrag} className="basic-container"/>
         </main>
     )
 }

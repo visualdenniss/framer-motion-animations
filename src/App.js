@@ -7,6 +7,7 @@ import Layout from './Layout/Layout';
 import SliderDemo from './SliderDemo/SliderDemo';
 import LayoutMini from './LayoutMini/LayoutMini';
 import Home from './Home';
+import UseScrollBasic from './useScrollBasic/UseScrollBasic';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home></Home>}></Route>
           <Route path='/basic' element={<Basic></Basic>}></Route>
+          <Route path='/usescrollbasic' element={<UseScrollBasic></UseScrollBasic>}></Route>
           <Route path='/variants' element={<Variants></Variants>}></Route>
           <Route path='/layout' element={<Layout></Layout>}></Route>
           <Route path='/slider' element={<SliderDemo></SliderDemo>}></Route>
