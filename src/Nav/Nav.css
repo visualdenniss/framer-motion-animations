@@ -1,0 +1,36 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 1000;
+}
+.nav-container {
+  border-right: 0.5px solid white;
+  height: 0px;
+  width: 120px;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.nav-container-active {
+  height: 300px;
+}
+nav ul {
+  list-style-type: none;
+  padding-top: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-link > li {
+  margin: 20px 0px;
+}

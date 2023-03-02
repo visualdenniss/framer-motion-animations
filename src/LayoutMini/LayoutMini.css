@@ -1,0 +1,188 @@
+.layout-mini {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #b1f, #a0f);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.layout-mini-container {
+  max-height: 520px;
+  border-radius: 12px;
+  height: 100%;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #b1f;
+}
+
+.layout-mini-gallery {
+  padding: 60px 60px 90px;
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.layout-mini-item {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.layout-mini-item:first-of-type {
+  grid-area: 1/1/2/2;
+}
+.layout-mini-item:nth-of-type(2) {
+  grid-area: 1/2/2/4;
+}
+.layout-mini-item:nth-of-type(3) {
+  grid-area: 2/1/3/3;
+}
+
+.layout-mini-item:last-of-type {
+  grid-area: 2/3/3/4;
+}
+
+.layout-mini-text-placeholder {
+  --placeholder-margin: 14px;
+  position: absolute;
+  right: var(--placeholder-margin);
+  bottom: var(--placeholder-margin);
+  left: var(--placeholder-margin);
+}
+
+.layout-mini-text-placeholder > * {
+  background: rgba(187, 0, 255, 0.16);
+  width: 100%;
+  height: calc(0.8 * var(--placeholder-margin));
+  border-radius: calc(0.2 * var(--placeholder-margin));
+}
+
+.layout-mini-text-placeholder > div:nth-of-type(1) {
+  width: 40%;
+  background: rgba(187, 0, 255, 0.1);
+  margin-bottom: calc(0.6 * var(--placeholder-margin));
+}
+.layout-mini-text-placeholder > div:nth-of-type(2) {
+  width: 96%;
+  margin-bottom: calc(0.6 * var(--placeholder-margin));
+}
+
+.layout-mini-text-placeholder > div:nth-of-type(3) {
+  width: 76%;
+  margin-bottom: 0;
+}
+
+.layout-mini-additionals {
+  --additional-margin: 10px;
+  position: absolute;
+  right: var(--additional-margin);
+  bottom: calc(-1 * var(--additional-margin) - 1rem);
+  left: var(--additional-margin);
+  display: flex;
+  height: calc(2 * var(--additional-margin));
+  place-content: space-between;
+  place-items: flex-end;
+
+  box-shadow: inset 0 2px rgb(187 0 255 / 8%);
+}
+
+.layout-mini-additionals > * {
+  width: 20%;
+  height: calc(0.8 * var(--additional-margin));
+  background: rgba(187, 0, 255, 0.16);
+  border-radius: calc(0.2 * var(--additional-margin));
+}
+
+.layout-mini-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+/* MODAL  */
+
+.layout-mini-modal-container {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 120px;
+  place-content: center;
+  place-items: center;
+  pointer-events: none;
+  /* background-color: pink; */
+  /* cursor: none !important; */
+}
+
+.layout-mini-modal-backdrop {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(315deg, #b1f, #a0f);
+  background: linear-gradient(135deg, #b1f, #a0f);
+  cursor: pointer;
+}
+
+.layout-mini-modal {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  background: #fff;
+  border-radius: 24px;
+}
+
+.layout-mini-modal .layout-mini-text-placeholder {
+  right: calc(1.5 * var(--placeholder-margin));
+  bottom: calc(3 * var(--placeholder-margin) + 1.5 * var(--placeholder-margin));
+  left: calc(1.5 * var(--placeholder-margin));
+}
+
+.layout-mini-modal .layout-mini-additionals {
+  right: calc(1.5 * var(--additional-margin));
+  bottom: calc(1.5 * var(--additional-margin));
+  left: calc(1.5 * var(--additional-margin));
+}
+
+.layout-mini-modal .layout-mini-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: rgba(187, 0, 255, 0.1);
+  border-radius: 50%;
+  color: #b0f;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+}
+
+.layout-mini-modal .layout-mini-modal-close > svg {
+  width: 60%;
+}
