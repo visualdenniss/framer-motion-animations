@@ -8,4 +8,7 @@ For simple props that can be passed to motion components, the animation settings
 
 More complex animations have their own dedicated components (like SliderDemo)
 
-Feel free to contribute or send a PR.
+To contribute, simply fork the project and then pull it to your local, after making changes and new commits, push it to your remote repo and then send a pull request to this repo. 
+
+
+![Fork-vs-Branch](https://user-images.githubusercontent.com/80699817/222788641-1ecbdfb3-8ef8-498c-b05b-a3010984b914.jpg)
