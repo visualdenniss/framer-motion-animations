@@ -6,8 +6,21 @@ import Basic from './Basic/Basic';
 import Layout from './Layout/Layout';
 import SliderDemo from './SliderDemo/SliderDemo';
 import LayoutMini from './LayoutMini/LayoutMini';
-import Home from './Home';
+import LayoutMiniv2 from './LayoutMiniv2/LayoutMiniv2';
 import UseScrollBasic from './useScrollBasic/UseScrollBasic';
+
+const styleHome = {
+    background: "linear-gradient(180deg, #f08, #d0e)",
+    width: "100vw",
+    height: "100vh"
+  }
+  
+
+const Home = () => {
+    return (
+        <div style={styleHome}></div>
+    )
+}
 
 function App() {
   return (
@@ -22,6 +35,7 @@ function App() {
           <Route path='/layout' element={<Layout></Layout>}></Route>
           <Route path='/slider' element={<SliderDemo></SliderDemo>}></Route>
           <Route path='/layout-mini' element={<LayoutMini></LayoutMini>}></Route>
+          <Route path='/layout-mini-v2' element={<LayoutMiniv2></LayoutMiniv2>}></Route>
         </Routes>
       </Router>
     </div>

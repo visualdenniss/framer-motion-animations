@@ -42,6 +42,11 @@ const Nav = () => {
                             Layout Mini
                         </li>
                     </Link>
+                    <Link className='nav-link' to='/layout-mini-v2'>
+                        <li>
+                            Layout Mini v2
+                        </li>
+                    </Link>
                 </ul>
             </div>
         </nav>
